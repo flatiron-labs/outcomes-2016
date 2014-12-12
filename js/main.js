@@ -2197,6 +2197,10 @@ $(function(){
         }
 
         // Ohhhh Snap!
+        if (window.scrollY === 0) {
+          document.body.style.overflow = 'auto';
+          return;
+        }
         if (window.scrollY != $(menuData.anchor).offset().top){
           if(this.isAnimatingTo()) {
             return;
@@ -2223,6 +2227,7 @@ $(function(){
             }
           } else if(slideData.activeLayer > 0) {
             slideData.activeLayer--;
+
 
             var offset = this.relativeToAbsolute(slideData.slides[slideData.activeLayer], 'top', 'top');
 
