@@ -2171,10 +2171,11 @@ $(function(){
 });
 
 function snap(info){
-  if (window.scrollY === 0) {
+  if (window.scrollY === 0 || atBottom()) {
     document.body.style.overflow = 'auto';
     return;
   }
+
   if (window.scrollY != $(menuData.anchor).offset().top){
     if(this.isAnimatingTo()) {
       return;
@@ -2262,5 +2263,9 @@ function isIos7Below() {
 
 function isUnsupportedMobile() {
   return /BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || isIos7Below()
+}
+
+function atBottom() {
+  return $(document).height() - window.innerHeight === window.scrollY
 }
 ;
