@@ -2111,6 +2111,20 @@ var slideData = {};
 slideData.slides = $('#skrollr-body').children('.section');
 slideData.activeLayer = 0;
 
+var snapData = {};
+snapData.animateUpSettings = {
+  duration: 1200,
+  easing: 'outCubic',
+  done: function() {
+    document.body.style.overflow = 'auto';
+  }
+}
+snapData.animateDownSettings = {
+  duration: 1200,
+  easing: 'outCubic',
+  done: snapData.animateUpSettings.done
+};
+
 $(function(){
   if( isUnsupportedMobile() ) {
     location.replace("//flatiron-annual-review.s3.amazonaws.com/blue.pdf");
@@ -2132,19 +2146,6 @@ $(function(){
   }
   // Magnific Popup
   $('.play-btn').magnificPopup({ type: 'iframe'});
-  // Skrollr Snap Setup
-  var animateUpSettings = {
-    duration: 1200,
-    easing: 'outCubic',
-    done: function() {
-      document.body.style.overflow = 'auto';
-    }
-  };
-  var animateDownSettings = {
-    duration: 1200,
-    easing: 'outCubic',
-    done: animateUpSettings.done
-  };
   // Skrollr Init
   if( isSupportedMobile() ) {
     $('#first-video').remove();
@@ -2157,88 +2158,93 @@ $(function(){
     var s = skrollr.init({
       forceHeight: false,
       render: function(info) {
-
-        $('#first-video')[0].oncanplaythrough = function() { $('#first-video')[0].play(); }
-        $('#final-video')[0].oncanplaythrough = function() { $('#final-video')[0].play(); }
-
-        // slide 14
-        var fourteenthOpacity = $('.fourteenth .table-container').css('opacity');
-        if (fourteenthOpacity > 0) {
-          $('.college-graduation').text(Math.round(fourteenthOpacity * 59) + '%').append('<span>1</span>');
-          $('.college-months').text(Math.round(fourteenthOpacity * 52)+ ' MONTHS').append('<span>2</span>');
-          $('.college-cost').text('$'+ Math.round(fourteenthOpacity * 62556).toLocaleString()).append('<span>3</span>');
-          $('.college-salary').text('$'+ Math.round(fourteenthOpacity * 44928).toLocaleString()).append('<span>4</span>');
-          $('.fis-graduation').text(Math.round(fourteenthOpacity * 98) + '%');
-          $('.fis-weeks').text(Math.round(fourteenthOpacity * 16)+ ' WEEKS');
-          $('.fis-cost').text('$'+ Math.round(fourteenthOpacity * 15000).toLocaleString());
-          $('.fis-salary').text('$'+ Math.round(fourteenthOpacity * 73771).toLocaleString());
-        }
-
-        // slide 19
-        var nineteenthOpacity = $('.nineteenth .layout-one-container').css('opacity');
-        if (nineteenthOpacity > 0) {
-          $('.hours').text(Math.round(nineteenthOpacity * 990)+ ' HOURS');
-          $('.lecture').text(Math.round(nineteenthOpacity * 144));
-          $('.labs').text(Math.round(nineteenthOpacity * 566));
-          $('.deploying').text(Math.round(nineteenthOpacity * 280));
-          $('.results').text(Math.round(nineteenthOpacity * 2) + ' YEARS');
-          $('.forks').text(Math.round(nineteenthOpacity * 14916).toLocaleString());
-          $('.commits').text(Math.round(nineteenthOpacity * 21815).toLocaleString());
-          $('.labs-complete').text(Math.round(nineteenthOpacity * 890));
-          $('.apps').text(Math.round(nineteenthOpacity * 365));
-        }
-
-        // slide 21
-        var twentyFirstOpacity = $('.twenty-first .layout-one-container').css('opacity');
-        if (twentyFirstOpacity > 0) {
-          $('.mentor').text(Math.round(twentyFirstOpacity * 25)+ '%')
-          $('.tech-conferences').text(Math.round(twentyFirstOpacity * 15) + '%')
-          $('.posts').text(Math.round(twentyFirstOpacity * 1427)+ '+')
-        }
-
-        // Ohhhh Snap!
-        if (window.scrollY === 0) {
-          document.body.style.overflow = 'auto';
-          return;
-        }
-        if (window.scrollY != $(menuData.anchor).offset().top){
-          if(this.isAnimatingTo()) {
-            return;
-          }
-
-          var lastOffset = this.relativeToAbsolute(slideData.slides[slideData.activeLayer], 'top', 'top');
-          if(this.getScrollTop() === lastOffset) {
-            return;
-          }
-
-          document.body.style.overflow = 'hidden';
-
-          //Make sure to start animating at the last snap pos
-          this.setScrollTop(lastOffset);
-
-          if(info.direction === 'down') {
-            if(slideData.activeLayer + 1 < slideData.slides.length) {
-              slideData.activeLayer++;
-
-              var offset = this.relativeToAbsolute(slideData.slides[slideData.activeLayer], 'top', 'top');
-
-              //Move down slow with nice easing
-              this.animateTo(offset, animateDownSettings);
-            }
-          } else if(slideData.activeLayer > 0) {
-            slideData.activeLayer--;
-
-
-            var offset = this.relativeToAbsolute(slideData.slides[slideData.activeLayer], 'top', 'top');
-
-            //Move up very fast
-            this.animateTo(offset, animateUpSettings);
-          }
-        }
+        window.dynamicText();
+        window.snap.call(this, info);
       }
     });
   }
 });
+
+function snap(info){
+  if (window.scrollY === 0) {
+    document.body.style.overflow = 'auto';
+    return;
+  }
+  if (window.scrollY != $(menuData.anchor).offset().top){
+    if(this.isAnimatingTo()) {
+      return;
+    }
+
+    var lastOffset = this.relativeToAbsolute(slideData.slides[slideData.activeLayer], 'top', 'top');
+    if(this.getScrollTop() === lastOffset) {
+      return;
+    }
+
+    document.body.style.overflow = 'hidden';
+
+    //Make sure to start animating at the last snap pos
+    this.setScrollTop(lastOffset);
+
+    if(info.direction === 'down') {
+      if(slideData.activeLayer + 1 < slideData.slides.length) {
+        slideData.activeLayer++;
+
+        var offset = this.relativeToAbsolute(slideData.slides[slideData.activeLayer], 'top', 'top');
+
+        //Move down slow with nice easing
+        this.animateTo(offset, snapData.animateDownSettings);
+      }
+    } else if(slideData.activeLayer > 0) {
+      slideData.activeLayer--;
+
+
+      var offset = this.relativeToAbsolute(slideData.slides[slideData.activeLayer], 'top', 'top');
+
+      //Move up very fast
+      this.animateTo(offset, snapData.animateUpSettings);
+    }
+  }
+}
+
+function dynamicText() {
+  $('#first-video')[0].oncanplaythrough = function() { $('#first-video')[0].play(); }
+  $('#final-video')[0].oncanplaythrough = function() { $('#final-video')[0].play(); }
+
+  // slide 14
+  var fourteenthOpacity = $('.fourteenth .table-container').css('opacity');
+  if (fourteenthOpacity > 0) {
+    $('.college-graduation').text(Math.round(fourteenthOpacity * 59) + '%').append('<span>1</span>');
+    $('.college-months').text(Math.round(fourteenthOpacity * 52)+ ' MONTHS').append('<span>2</span>');
+    $('.college-cost').text('$'+ Math.round(fourteenthOpacity * 62556).toLocaleString()).append('<span>3</span>');
+    $('.college-salary').text('$'+ Math.round(fourteenthOpacity * 44928).toLocaleString()).append('<span>4</span>');
+    $('.fis-graduation').text(Math.round(fourteenthOpacity * 98) + '%');
+    $('.fis-weeks').text(Math.round(fourteenthOpacity * 16)+ ' WEEKS');
+    $('.fis-cost').text('$'+ Math.round(fourteenthOpacity * 15000).toLocaleString());
+    $('.fis-salary').text('$'+ Math.round(fourteenthOpacity * 73771).toLocaleString());
+  }
+
+  // slide 19
+  var nineteenthOpacity = $('.nineteenth .layout-one-container').css('opacity');
+  if (nineteenthOpacity > 0) {
+    $('.hours').text(Math.round(nineteenthOpacity * 990)+ ' HOURS');
+    $('.lecture').text(Math.round(nineteenthOpacity * 144));
+    $('.labs').text(Math.round(nineteenthOpacity * 566));
+    $('.deploying').text(Math.round(nineteenthOpacity * 280));
+    $('.results').text(Math.round(nineteenthOpacity * 2) + ' YEARS');
+    $('.forks').text(Math.round(nineteenthOpacity * 14916).toLocaleString());
+    $('.commits').text(Math.round(nineteenthOpacity * 21815).toLocaleString());
+    $('.labs-complete').text(Math.round(nineteenthOpacity * 890));
+    $('.apps').text(Math.round(nineteenthOpacity * 365));
+  }
+
+  // slide 21
+  var twentyFirstOpacity = $('.twenty-first .layout-one-container').css('opacity');
+  if (twentyFirstOpacity > 0) {
+    $('.mentor').text(Math.round(twentyFirstOpacity * 25)+ '%')
+    $('.tech-conferences').text(Math.round(twentyFirstOpacity * 15) + '%')
+    $('.posts').text(Math.round(twentyFirstOpacity * 1427)+ '+')
+  }
+}
 
 function isSupportedMobile() {
   return /Android|webOS/i.test(navigator.userAgent) || isIos8()
