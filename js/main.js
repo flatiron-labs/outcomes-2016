@@ -2152,12 +2152,17 @@ $(function(){
     $('#final-video').remove();
     document.body.style.overflow = 'scroll';
     var s = skrollr.init({
-      forceHeight: false
+      forceHeight: false,
+      render: function(info) {
+        window.dynamicText();
+      }
     });
   } else {
     var s = skrollr.init({
       forceHeight: false,
       render: function(info) {
+        $('#first-video')[0].oncanplaythrough = function() { $('#first-video')[0].play(); }
+        $('#final-video')[0].oncanplaythrough = function() { $('#final-video')[0].play(); }
         window.dynamicText();
         window.snap.call(this, info);
       }
@@ -2207,9 +2212,6 @@ function snap(info){
 }
 
 function dynamicText() {
-  $('#first-video')[0].oncanplaythrough = function() { $('#first-video')[0].play(); }
-  $('#final-video')[0].oncanplaythrough = function() { $('#final-video')[0].play(); }
-
   // slide 14
   var fourteenthOpacity = $('.fourteenth .table-container').css('opacity');
   if (fourteenthOpacity > 0) {
