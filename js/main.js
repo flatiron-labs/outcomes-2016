@@ -2127,7 +2127,7 @@ snapData.animateDownSettings = {
 
 $(function(){
   if( isUnsupportedMobile() ) {
-    location.replace("//flatiron-annual-review.s3.amazonaws.com/FAR.pdf");
+    location.replace("//flatiron-annual-review.s3.amazonaws.com/flatiron_annual_review.pdf");
   }
   // Handle url anchors
   var anchor = window.location.hash;
