@@ -2182,7 +2182,8 @@ function snap(info){
     }
 
     var lastOffset = this.relativeToAbsolute(slideData.slides[slideData.activeLayer], 'top', 'top');
-    if(this.getScrollTop() === lastOffset) {
+    // Math ceil and Math ceil + 1 for zoom fix
+    if(Math.ceil(this.getScrollTop()) === lastOffset || Math.ceil(this.getScrollTop()) + 1 === lastOffset) {
       return;
     }
 
