@@ -1,0 +1,144 @@
+.flatiron-container.mobile-hide
+
+#nav
+  a.slashes href='/'
+    .logo-container= '//'
+
+  .social-container.mobile-hide
+    a.twitter-icon href='//ctt.ec/Qw87U' target='_blank'
+    a.facebook-icon href='//www.facebook.com/sharer/sharer.php?u=http://far.flatironschool.com' target='_blank'
+
+#skrollr-body
+  #first.section
+    #home
+      video#first-video loop="" preload=""
+        source src="//d280vzogkide3l.cloudfront.net/videos/far-broll-1.mp4" type="video/mp4"
+        source src="//d280vzogkide3l.cloudfront.net/videos/far-broll-1.webm" type='video/webm'
+    .slide-static-content data-top="opacity:1;" data-top-bottom="opacity:0;" data-anchor-target="#first" data-menu-anchor="#home"
+      a href='/#fuller'
+        img src="//d280vzogkide3l.cloudfront.net/icons/down_arrow.svg"
+  #second.section
+    #fuller
+  #third.section.timeline-bottom
+    #timeline
+    .slide-static-content
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/timeline_arrow_down.svg"
+  #fourth.section.timeline-full.bg
+    .slide-static-content style="top:40%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_right.svg"
+  #fifth.section.timeline-full
+    .slide-static-content style="top:20%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_right.svg"
+    .slide-static-content style="top:50%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_left.svg"
+  #sixth.section.timeline-full.bg
+    .slide-static-content style="top:20%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_left.svg"
+    .slide-static-content style="top:50%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_right.svg"
+  #seventh.section.timeline-full.bg
+    .slide-static-content style="top:30%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_right.svg"
+  #eighth.section.timeline-full.bg
+    .slide-static-content style="top:18%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_left.svg"
+    .slide-static-content style="top:55%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_right.svg"
+  #ninth.section.timeline-full
+    .slide-static-content style="top:20%"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_right.svg"
+    .slide-static-content style="top:55%"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_left.svg"
+  #tenth.section.timeline-full.bg
+    .slide-static-content style="top:20%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_right.svg"
+    .slide-static-content style="top:60%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_left.svg"
+  #eleventh.section.timeline-full.bg
+    .slide-static-content style="top:35%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_right.svg"
+  #twelfth.section.timeline-full.bg
+    .slide-static-content style="top:33%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_left.svg"
+  #thirteenth.section.timeline-top
+    .slide-static-content style="top:15%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/timeline_arrow_down.svg"
+  #fourteenth.section.narrative
+    #problem
+  #fifteenth.section.narrative.bg
+    #curriculum
+  #sixteenth.section.narrative
+    #careers
+  #seventeenth.section.narrative.bg
+    #collaboration
+  #eighteenth.section.narrative
+    #diversity
+  #nineteenth.section.narrative.bg
+    #rigor
+  #twentieth.section.narrative.bg
+    #culture
+  #twenty-first.section.narrative
+    #passion
+  #twenty-first-half.section.alumni
+    #alumni
+  #twenty-second.section.alumni.bg
+    #ycombinator
+  #twenty-third.section.alumni.bg
+    #boeing
+  #twenty-fourth.section.alumni.bg
+    #codenewbies
+  #twenty-fifth.section.alumni.bg
+    #queensjs
+  #twenty-sixth.section.alumni.bg
+    #perkla
+  #twenty-seventh.section.alumni.bg
+    #heat-seek
+  #final.section
+    #thank-you
+      video#final-video loop="" preload=""
+        source src="//d280vzogkide3l.cloudfront.net/videos/far-broll-3.mp4" type="video/mp4"
+        source src="//d280vzogkide3l.cloudfront.net/videos/far-broll-3.webm" type='video/webm'
+
+= partial "first"
+= partial "second"
+
+// Timeline
+= partial "timelines/third"
+= partial "timelines/fourth"
+= partial "timelines/fifth"
+= partial "timelines/sixth"
+= partial "timelines/seventh"
+= partial "timelines/eighth"
+= partial "timelines/ninth"
+= partial "timelines/tenth"
+= partial "timelines/eleventh"
+= partial "timelines/twelfth"
+= partial "timelines/thirteenth"
+
+/ //Narative
+= partial "naratives/fourteenth"
+= partial "naratives/fifteenth"
+= partial "naratives/sixteenth"
+= partial "naratives/seventeenth"
+= partial "naratives/eighteenth"
+= partial "naratives/nineteenth"
+= partial "naratives/twentieth"
+= partial "naratives/twenty-first"
+
+/ // Alumni Callouts
+= partial "alumni/twenty-first-half"
+= partial "alumni/twenty-second"
+= partial "alumni/twenty-third"
+= partial "alumni/twenty-fourth"
+= partial "alumni/twenty-fifth"
+= partial "alumni/twenty-sixth"
+= partial "alumni/twenty-seventh"
+
+/ //Final
+= partial "final"
+
+= partial "menu"
+
+#footer.mobile-hide
+  .hamburger-container
+    #hamburger-menu

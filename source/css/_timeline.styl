@@ -1,0 +1,56 @@
+.timeline-full::after
+  content ' '
+  position absolute
+  top 0
+  left 49.9%
+  border-left 2px solid #FFF
+  z-index 2
+  height 100%
+
+.timeline-bottom::after
+  @extends .timeline-full::after
+  height 5%
+  top 95%
+
+.timeline-top::after
+  @extends .timeline-full::after
+  height 15%
+  top 0
+
+.timeline-icon
+  width 60px
+  height 60px
+  z-index 1000
+
+.timeline-title
+  @extends .large-text-bold
+  margin: 0
+
+@media screen and (max-width: 970px)
+  .timeline-icon
+    width 55px
+    height 55px
+    z-index 1000
+
+  .timeline-title
+    @extends .large-text-bold
+
+@media screen and (max-width: 767px)
+  .timeline-icon
+    width 45px
+    height 45px
+    z-index 1000
+
+  .timeline-title
+    @extends .large-text-bold
+
+@media screen and (max-width: 424px)
+  .timeline-icon
+    width 35px
+    height 35px
+    z-index 1000
+
+  .timeline-title
+    font 22px/22px NimbusSan-Bol
+    a
+      display: inline-block;

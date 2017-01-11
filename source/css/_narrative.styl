@@ -1,0 +1,242 @@
+.header-lg-txt
+  font 85px 'NimbusSanCon-Bol'
+  line-height initial
+  text-transform uppercase
+
+.header-md-txt
+  font 55px 'NimbusSanCon-Bol'
+  line-height initial
+
+.header-sm-txt
+  @extend .medium-text-bold
+
+.header-xs-txt
+  font 28px 'NimbusSan-Bol'
+
+.header-align-md-lg
+  // Use .header-align-md-lg if you have to align a mid and lg text header in two neighboring columns. See 19th section for ex.
+  margin-top 23px
+
+.subhead-light-text
+  font 14px 'NimbusSan-Lig'
+  text-transform uppercase
+  letter-spacing 1px
+
+.subhead-bold-text
+  font 14px/23px 'NimbusSan-Bol'
+  text-transform uppercase
+  letter-spacing 2px
+
+.subhead-bold-text-header
+  font 14px 'NimbusSan-Bol'
+  text-transform uppercase
+  letter-spacing 2px
+
+.quote-text-sm
+  font 18px/26px 'NimbusSan-Reg'
+
+.narrative-underline
+  border-bottom 1px solid white
+
+.narrative
+  background-color #418584
+  color white
+
+  .title-container
+    text-align center
+    transform translate(0, -50%)
+    -webkit-transform translate(0, -50%)
+
+    .narrative-title
+      center(800px)
+
+      &.wide
+        center(960px)
+
+      a, a:visited
+        text-decoration none
+        border-bottom 3px solid white
+
+        &:hover
+          color #231f20
+          border-color #231f20
+          transition 0.1s all linear
+
+.header-arrow::after
+  content ' '
+  background url("//d280vzogkide3l.cloudfront.net/icons/linkarrow.svg")
+  width 12px
+  height 12px
+  display inline-block
+
+.header-link:hover .header-arrow::after
+  background url("//d280vzogkide3l.cloudfront.net/icons/linkarrow_hover.svg")
+
+.byline-no-arrow
+  height 17px
+
+.table-container
+  position fixed
+  top 45%
+  width 100%
+
+.table-sec-14
+  max-width 1000px
+  margin 0 auto
+  border-collapse separate
+  border-spacing 33px 15px
+  text-align left
+
+  th
+    @extend .subhead-light-text
+    @extend .narrative-underline
+    margin-left 2em
+    line-height 2em
+    min-width 136px
+    width 200px
+
+    &:first-child
+      border-bottom none
+
+  td
+    @extend .header-md-txt
+
+  .table-row-name
+    font 21px/25px NimbusSan-Bol
+    text-transform capitalize
+
+  .width-fix
+    min-width 215px
+
+.twentieth
+  .narrative-underline
+    line-height 2em
+
+.twenty-first
+  .subhead-bold-text
+    col(9/10)
+
+.alumni .narrative-title, .final .narrative-title
+  center(65%)
+
+@media screen and (max-width: 970px)
+  .header-lg-txt
+    font 44px 'NimbusSanCon-Bol'
+    line-height initial
+
+  .header-md-txt
+    font 38px 'NimbusSanCon-Bol'
+    line-height initial
+
+  .header-sm-txt
+    @extend .medium-text-bold
+
+  .quote-text-sm
+    font 16px/18px 'NimbusSan-Reg'
+
+  .narrative-title
+    font 36px 'NimbusSan-Bol'
+
+  .nineteenth
+    .header-align-md-lg
+      margin-top 7px !important
+
+  .twentieth
+    .narrative-underline
+      font-size 22px
+  .fourteenth .title-container
+    margin-top -38px
+  .table-container
+    margin-top -38px
+  .table-sec-14
+    th
+      line-height 1.5em
+      width 162px
+    td
+      @extend .header-md-txt
+    .table-row-name
+      @extend .regular-text-bold
+    .width-fix
+      min-width 162px
+
+  .header-align-md-lg
+    margin-top 7px
+
+  .alumni .narrative-title, .final .narrative-title
+    width 90%
+    line-height 44px
+
+  .byline-no-arrow
+    height 30px
+
+@media screen and (max-width: 424px)
+  .header-lg-txt
+    font 30px 'NimbusSanCon-Bol'
+    line-height initial
+
+  .header-md-txt
+    font 24px 'NimbusSanCon-Bol'
+    line-height initial
+
+  .header-sm-txt
+    @extend .medium-text-bold
+
+  .header-xs-txt
+    font 18px 'NimbusSan-Bol'
+
+  .subhead-light-text
+    font 14px 'NimbusSan-Lig'
+    letter-spacing 1px
+
+  .subhead-bold-text
+    font 14px/14px 'NimbusSan-Bol'
+    letter-spacing 1px
+
+  .subhead-bold-text-lg
+    font 16px 'NimbusSan-Bol'
+    letter-spacing 1px
+
+  .quote-text-sm
+    font 15px/17px 'NimbusSan-Reg'
+
+  .narrative .narrative-title, .alumni .narrative-title, .final .narrative-title
+    font 22px/22px 'NimbusSan-Bol'
+
+  .alumni .narrative-title, .final .narrative-title
+    line-height 32px
+
+  .narrative-title
+    width 100%
+
+  .table-container
+    margin-top -65px
+  .table-sec-14
+    margin-bottom 0
+    border-spacing 8px 2px
+    th
+      line-height initial
+      width 80px
+      min-width 80px
+    td
+      font 20px 'NimbusSanCon-Bol'
+    .table-row-name
+      @extend .regular-text-bold
+    .width-fix
+      min-width 80px
+
+  .header-align-md-lg
+    margin-top 6px
+
+  .nineteenth
+    .layout-one-container
+      margin-top 10px
+    .mobile-full
+      width 100%
+      text-align left
+    .mobile-third
+      width 31.34%
+    .mobile-half
+      width 46.5%
+    p
+      margin 5px 0
+

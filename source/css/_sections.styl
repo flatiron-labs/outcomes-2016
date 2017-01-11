@@ -1,0 +1,773 @@
+.bg
+  background-size cover !important
+  background-position: center !important
+
+.section
+  height 100vh
+  width 100%
+  position relative
+  overflow hidden
+
+.fixed-section
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  a
+    color: black
+
+  .centering-container
+    center(970px)
+
+.section-content
+  width 100%
+  position fixed
+
+.divided-section-content
+  width 100%
+  position fixed
+
+  a
+    text-decoration none
+    border-bottom 2px solid black
+
+    &:hover
+      color white
+      border-color white
+      transition 0.1s all linear
+
+  p
+    margin-top 12px
+
+  .date
+    margin 12px 0
+
+  .event-left
+    col(1/2)
+    margin-left -40px
+
+    .event-left-content
+      float right
+      text-align right
+      width 80%
+
+      @media screen and (min-width: 1200px)
+        width: 530px
+
+  .event-right
+    col(2/5, 1/2)
+    padding-left 60px
+
+    @media screen and (min-width: 1200px)
+      width: 515px
+
+  .event-left, .event-right
+    margin-top -50px
+
+.three-col-container
+  col(1/3)
+
+  .header-img-container
+    border-bottom 1px solid white
+    padding 20px 5px 13px 0
+
+    &:after
+      content ' '
+      display block
+      clear both
+
+    .img-col
+      col(1/3)
+
+    img
+      display block
+      max-height 65px
+
+  .byline
+    @extend .subhead-light-text
+    padding-bottom 3em
+    border-bottom 1px solid white
+    margin 1em 0
+
+  .quote-container
+    .quote-icon
+      float left
+      width 1em
+
+    p
+      span(.92)
+      float right
+      margin 0 0 1em
+
+    .quote
+      col(.25, .10)
+    .twitter-handle
+      span(.3)
+      @extend .small-text
+      position relative
+      top 10px
+
+    .profile-container
+      height 4em
+
+      .label
+        span(.78)
+        margin 0
+
+.layout-one-container
+  position fixed
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  -webkit-transform translate(-50%, -50%)
+  width 100%
+
+  .three-col-container
+    col(1/3)
+
+    .quote-icon
+      display block
+#first
+  @keyframes arrow
+    from
+      bottom: 8%
+    to
+      bottom: 7%
+
+  &.section
+    background-color #00b3e6
+
+  .slide-static-content
+    -webkit-animation: arrow 1s alternate infinite
+    -moz-animation: arrow 1s alternate infinite
+    animation: arrow 1s alternate infinite
+
+    img
+      height 3em
+      width 3em
+
+.first
+  text-align: center
+  @extend .white-text
+
+  .sub-title
+    center(80%)
+    font 54px NimbusSan-Reg
+    margin-bottom 0.5em
+
+  .years
+    font 40px NimbusSanCon-Bol
+    center(50%)
+
+#second
+  background-color: #00b3e6
+.second
+  text-align: center
+
+  .quote-container
+    position: fixed
+    top: 50%
+    transform translate(0, -50%)
+    -webkit-transform translate(0, -50%)
+    width: 100%
+
+  .quote-image
+    center(4em)
+    background-image: url('//d280vzogkide3l.cloudfront.net/icons/quote_icon.svg')
+    background-repeat: no-repeat
+    height: 3.5em
+    margin-bottom 3em
+
+  .quote
+    @extend .white-text
+    @extend .medium-text
+    margin 0 auto
+    padding 0
+    display block
+    float none
+    max-width 70%
+
+  .author
+    center(400px)
+    color: #231f20
+    margin-top 3em
+    text-transform uppercase
+
+#third
+  background-color #ffdd30
+.third
+  text-align center
+
+  .title-container
+    transform translate(0, -50%)
+    -webkit-transform translate(0, -50%)
+
+  .title
+    center(800px)
+
+  .sub-title
+    center(750px)
+
+    @media screen and (max-width: 767px)
+      center(80%)
+
+.fourth
+  z-index 57
+#fourth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide4.png')
+  background-color #ffdd30
+
+.fifth
+  z-index 56
+#fifth
+  background-color #ffdd30
+
+.sixth
+  z-index 55
+#sixth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide6.jpg')
+  background-color #ffdd30
+
+.seventh
+  z-index 54
+#seventh
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide7.jpg')
+
+.eighth
+  z-index 53
+#eighth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide8.jpg')
+  background-color #ffdd30
+
+.ninth
+  z-index 52
+#ninth
+  background-color #ffdd30
+
+.tenth
+  z-index 51
+#tenth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide10.png')
+  background-color #ffdd30
+
+.eleventh
+  z-index 50
+#eleventh
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide11.jpg')
+
+.twelfth
+  z-index 49
+#twelfth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide12.png')
+  background-color #ffdd30
+
+  .event-left-content
+    max-width 525px
+
+#thirteenth
+  background-color #ffdd30
+
+  img
+    height 3em
+    width 3em
+
+.thirteenth
+  z-index 48
+  text-align: center
+
+  .title
+    center(980px)
+
+    @media screen and (max-width: 767px)
+      center(80%)
+
+  .sub-title
+    center(40%)
+
+img.down-arrow
+  height 50px
+  width 50px
+
+#fourteenth
+  background-color #27578c
+
+.fourteenth
+  z-index 47
+
+  table span
+    font 20px/31px NimbusSan-Reg
+    vertical-align text-top
+
+  .header-link
+    @extend .small-text
+    text-decoration underline
+
+#fifteenth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide15.png')
+  background-color #27578c
+
+.fifteenth
+  z-index 46
+
+  .callout-container
+    position fixed
+    top 40%
+    width 100%
+
+  .message-container
+    col(.66)
+    border-top 1px solid white
+
+  .technologies-container
+    col(.32)
+    border-top 1px solid white
+    padding-top 1em
+
+    .technology-icons
+      center(80%)
+
+      .circle-icon
+        col(1/4, 0.07)
+        margin-top 1em
+        float left
+
+#sixteenth
+  background-color #27578c
+
+.sixteenth
+  z-index 45
+
+  .layout-one-container p
+    col(7/8)
+    float right
+
+  .img-col
+    height 4em
+
+#seventeenth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide17.jpg')
+  background-color #27578c
+
+.seventeenth
+  z-index 44
+
+  .meetups
+    .profile-container
+      height 1em
+
+      .profile-text-container
+        margin-left 0
+
+        .label
+          width 100%
+
+  .guest-speakers
+    .profile-container
+      height 3em
+
+#eighteenth
+  background-color #27578c
+
+.eighteenth
+  z-index 43
+
+  .callout-container
+    position fixed
+    width 100%
+    text-align left
+
+    .column-container
+      col(.32)
+      border-top 1px solid white
+      padding-top 1em
+
+      .col-header
+        @extend .megular-text
+
+      .collaboration-icon
+        width 16%
+        height 3em
+        float left
+        background-repeat no-repeat
+
+      .catherine-myers-icon
+        background-image url('//d280vzogkide3l.cloudfront.net/icons/catherine.svg')
+
+      .will-lowry-icon
+        background-image url('//d280vzogkide3l.cloudfront.net/icons/will.svg')
+
+      .rebecca-greenblat-icon
+        background-image url('//d280vzogkide3l.cloudfront.net/icons/rebecca.svg')
+
+.profile-container
+  padding-top 1em
+
+  &:first-child
+    padding-top 0.5em
+
+  .label
+    font 18px/18px NimbusSan-Bol
+    margin 0
+    width 100%
+
+  .profile-text-container
+    float left
+    max-width 70%
+    margin-left 6%
+
+.col-header, .profile-container, .long-question
+  margin 0
+
+.long-question
+  @extend .megular-text
+
+#nineteenth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide19.jpg')
+  background-color #27578c
+
+.nineteenth
+  z-index 42
+
+  .mobile-full
+    text-align left
+
+  .header-align-md-lg
+    margin-top 35px
+
+#twentieth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide20.jpg')
+  background-color #27578c
+
+.twentieth
+  z-index 41
+
+  .quote-container
+    margin-top 1em
+
+#twenty-first
+  background-color #27578c
+.twenty-first
+  z-index 40
+
+// Alumni
+#twenty-first-half
+  background-color #5cc0b1
+
+.twenty-first-half
+  z-index 39
+
+  p.medium-text
+    text-align center
+
+  img.down-arrow
+    center(50px)
+
+#twenty-second
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide22.jpg')
+  background-color #107c78
+
+.twenty-second
+  z-index 38
+
+#twenty-third
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide23.jpg')
+  background-color #107c78
+
+.twenty-third
+  z-index 37
+
+#twenty-fourth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide24.jpg')
+  background-color #107c78
+
+  @media screen and (max-width: 560px)
+    background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide24_mobile.jpg')
+
+.twenty-fourth
+  z-index 36
+
+#twenty-fifth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide25.jpg')
+  background-color #107c78
+.twenty-fifth
+  z-index 35
+
+#twenty-sixth
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide26.jpg')
+  background-color #107c78
+.twenty-sixth
+  z-index 34
+
+#twenty-seventh
+  background url('//d280vzogkide3l.cloudfront.net/slide_bg/bg_image_slide27.jpg')
+  background-color #107c78
+.twenty-seventh
+  z-index 33
+
+  h1.celebration-text
+    margin-top 2em
+    center(73%)
+
+#final
+  background-color #00b3e6
+.final
+  z-index 32
+  text-align center
+
+  h1
+    margin-top 1em
+
+  .final-container
+    center(73%)
+
+  .title-container
+    top 30%
+
+    .heart-icon-container
+      center(75px)
+
+      .heart-icon
+        background-image: url('//d280vzogkide3l.cloudfront.net/icons/heart_icon.svg')
+        background-repeat: no-repeat
+        height: 75px
+        width: 75px
+
+  .callout
+    color white
+    position fixed
+    top 60%
+    width 100%
+
+    .social-container
+      center(68px)
+
+    p.share-text
+      margin-top 0.5em
+
+  a
+    color white
+  a:hover
+    color #231f20
+
+@media screen and (max-width: 970px)
+  .divided-section-content
+    .event-right
+      padding-left 36px
+    .event-left
+      margin-left -36px
+    .date
+      @extend .regular-text
+    a
+      text-decoration underline
+      border-bottom none
+    a.play-btn
+      text-decoration none
+      border-bottom 2px solid black
+      padding 8px 24px
+      &:hover
+        border-color white
+
+  .profile-container
+    .profile-text-container
+      max-width 67%
+      margin-left 10px
+
+    .label
+      @extend .quote-text-sm
+
+  .fifteenth
+    .message-container
+      col(3/5)
+    .technologies-container
+      col(2/5)
+
+  .fixed-section .centering-container
+    width 90%
+
+  .layout-one-container
+    .three-col-container
+      .byline
+        @extend .subhead-light-text
+        margin 5px 0
+        padding-bottom 5px
+      .header-arrow
+        padding-bottom 18px
+
+      .quote-container
+        .quote
+          width 70px
+          margin-left 10%
+        .twitter-handle
+          top 5px
+
+@media screen and (max-width: 767px)
+  .second .quote
+    max-width 80%
+    font 2.5em NimbusSanCon-Reg
+
+  .divided-section-content
+    .event-left, .event-right
+      margin-top -65px
+
+  .layout-one-container
+    margin-top 20px
+    .three-col-container
+      .byline
+        height 42px
+      .byline-no-arrow, .byline
+        padding-bottom 10px
+  .thirteenth
+    .title
+      center(90%)
+    .sub-title
+      margin-top 0
+      margin-bottom 12px
+
+  .seventeenth .resig-icon
+    margin-top 10px
+
+  .eighteenth .callout-container
+    margin-top -20px
+
+  .long-question
+    font 20px/26px NimbusSan-Bol
+
+  .narrative-title
+    @extend .large-text-bold
+@media screen and (max-width: 424px)
+  #first .slide-static-content img
+    margin-top -120px
+
+  .second .quote
+    max-width 90%
+    font 2em NimbusSanCon-Reg
+
+  .divided-section-content
+    .event-right
+      padding-left 15px
+    .event-left
+      margin-left -15px
+      .event-left-content
+        width 86%
+    .date
+      @extend .regular-text
+      margin 0 0 10px
+    .event-left, .event-right
+      margin-top -4px
+
+  .narrative
+    .title-container
+      margin-top -30px
+
+  .layout-one-container
+    margin-top -35px
+    .three-col-container
+      width 100%
+      .byline
+        height auto
+      .byline-no-arrow, .byline
+        padding-bottom 2px
+      .quote-container
+        .quote-icon
+          font-size 10px
+        .quote
+          margin-left 10%
+        .twitter-handle
+          top 5px
+        p
+          margin-bottom 2px
+
+      .mobile-half
+        max-width 49%
+
+      .profile-container
+        padding-top 2px
+        height auto
+        display inline-block
+
+        .profile-text-container
+          width 100%
+
+        .label
+          @extend .quote-text-sm
+
+  .first .title-container
+    margin-top -50px
+  .fourteenth .title-container
+    margin-top -40px
+  .fourteenth .title-container.source
+    margin-top 5px
+  .fifteenth.narrative .title-container
+    margin-top 0
+
+  .fifteenth .message-container, .fifteenth .technologies-container
+    width 100%
+
+    .circle-icon
+      col(1/4,.07)
+
+  .sixteenth.narrative .title-container
+    margin-top 0
+  .sixteenth .layout-one-container
+    margin-top -5px
+  .seventeenth .layout-one-container
+    margin-top -15px
+  .eighteenth.narrative .title-container
+    margin-top -20px
+  .twentieth.narrative .narrative-title
+    margin-top -30px
+  .twentieth .layout-one-container
+    margin-top -25px
+
+  .seventeenth .resig-icon
+    margin-top 0
+
+  .fifteenth .callout-container
+    margin-top -55px
+
+  .eighteenth .callout-container
+    margin-top -58px
+
+    .column-container
+      width 100%
+      padding 1em 0
+      line-height initial
+      .quote-container
+        .profile-text-container
+          line-height initial
+          max-width 300px
+          .label
+            font 15px/17px 'NimbusSan-Bol'
+
+  .megular-text
+    font 18px/26px NimbusSan-Bol
+
+  .long-question
+    @extend .megular-text
+    text-align center
+
+  .twentieth .layout-one-container .header-arrow
+    padding-bottom 0px
+  .twenty-first .layout-one-container
+    margin-top 35px
+  .twenty-first .layout-one-container:last-child
+    margin-top 0
+  .final
+    .title-container
+      margin-top 35px
+    .callout
+      margin-top 55px
+    .narrative-title
+      margin-top 0
+    .thank-you-text
+      margin-top 0.5em
+  #twenty-fourth
+    background-position 75% 130% !important
+    background-size auto !important
+
+video
+  min-height 100vh
+  min-width 100%
+  position absolute
+  overflow hidden
+
+#first-video, #final-video
+  opacity 0
