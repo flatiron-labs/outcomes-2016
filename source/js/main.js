@@ -139,7 +139,7 @@ function snap(info){
 
 function dynamicText() {
   // slide 14
-  var fourteenthOpacity = $('.fourteenth .table-container').css('opacity');
+  var fourteenthOpacity = $('.roi-comparison .table-container').css('opacity');
   if (fourteenthOpacity > 0) {
     $('.college-graduation').text(Math.round(fourteenthOpacity * 59) + '%').append('<span>1</span>');
     $('.college-months').text(Math.round(fourteenthOpacity * 52)+ ' MONTHS').append('<span>2</span>');

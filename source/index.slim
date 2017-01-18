@@ -17,10 +17,13 @@ a.flatiron-container.mobile-hide href='//flatironschool.com'
         source src="//d280vzogkide3l.cloudfront.net/videos/far-broll-1.mp4" type="video/mp4"
         source src="//d280vzogkide3l.cloudfront.net/videos/far-broll-1.webm" type='video/webm'
     .slide-static-content data-top="opacity:1;" data-top-bottom="opacity:0;" data-anchor-target="#first" data-menu-anchor="#home"
-      a href='/#fuller'
+      a href='/#outcomes'
         img src="//d280vzogkide3l.cloudfront.net/icons/down_arrow.svg"
-  #second.section
-    #fuller
+  #outcomes.section.narrative.bg
+  #trusted-results-section.section.narrative.bg
+    #trusted-results
+  #roi-comparison-section.section.narrative.bg
+    #roi-comparison
   #third.section.timeline-bottom
     #timeline
     .slide-static-content
@@ -102,7 +105,9 @@ a.flatiron-container.mobile-hide href='//flatironschool.com'
         source src="//d280vzogkide3l.cloudfront.net/videos/far-broll-3.webm" type='video/webm'
 
 = partial "first"
-= partial "old_second"
+= partial "outcomes"
+= partial "trusted_results"
+= partial "roi_comparison"
 
 // Timeline
 = partial "timelines/old_third"
