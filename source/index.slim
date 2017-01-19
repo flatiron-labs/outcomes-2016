@@ -30,8 +30,13 @@ a.flatiron-container.mobile-hide href='//flatironschool.com'
     #accountability
     .slide-static-content
       img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/timeline_arrow_down.svg"
-  #third.section.timeline-bottom
+  #timeline-section.section.timeline-full
     #timeline
+    .slide-static-content style="top:20%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_right.svg"
+    .slide-static-content style="top:50%;"
+      img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/arrow_icon_left.svg"
+  #third.section.timeline-bottom
     .slide-static-content
       img.timeline-icon src="//d280vzogkide3l.cloudfront.net/icons/timeline_arrow_down.svg"
   #fourth.section.timeline-full.bg
@@ -115,11 +120,10 @@ a.flatiron-container.mobile-hide href='//flatironschool.com'
 = partial "trusted_results"
 = partial "roi_comparison"
 = partial "accountability"
+= partial "timeline_one"
 
 // Timeline
-= partial "timelines/old_third"
 = partial "timelines/old_fourth"
-= partial "timelines/old_fifth"
 = partial "timelines/old_sixth"
 = partial "timelines/old_seventh"
 = partial "timelines/old_eighth"
