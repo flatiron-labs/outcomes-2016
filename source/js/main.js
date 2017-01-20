@@ -33,10 +33,6 @@ $(function(){
     $('#first-video').css('transition', '0.5s all linear');
     $('#first-video').css('opacity', 1);
   }
-  $('#final-video')[0].onloadeddata = function() {
-    $('#final-video').css('transition', '0.5s all linear');
-    $('#final-video').css('opacity', 1);
-  }
   // Magnific Popup
   $('.play-btn').magnificPopup({ type: 'iframe'});
 
@@ -46,7 +42,6 @@ $(function(){
   // Skrollr Init
   if( isSupportedMobile() ) {
     $('#first-video').remove();
-    $('#final-video').remove();
     document.body.style.overflow = 'scroll';
     var s = skrollr.init({
       forceHeight: false,
@@ -73,7 +68,6 @@ $(function(){
       forceHeight: false,
       render: function(info) {
         $('#first-video')[0].oncanplaythrough = function() { $('#first-video')[0].play(); }
-        $('#final-video')[0].oncanplaythrough = function() { $('#final-video')[0].play(); }
         window.dynamicText();
         window.snap.call(this, info);
       }
