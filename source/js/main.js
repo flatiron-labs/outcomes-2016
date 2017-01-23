@@ -132,39 +132,21 @@ function snap(info){
 }
 
 function dynamicText() {
-  // slide 14
-  var fourteenthOpacity = $('.roi-comparison .table-container').css('opacity');
-  if (fourteenthOpacity > 0) {
-    $('.college-graduation').text(Math.round(fourteenthOpacity * 59) + '%').append('<span>1</span>');
-    $('.college-months').text(Math.round(fourteenthOpacity * 52)+ ' MONTHS').append('<span>2</span>');
-    $('.college-cost').text('$'+ Math.round(fourteenthOpacity * 62556).toLocaleString()).append('<span>3</span>');
-    $('.college-salary').text('$'+ Math.round(fourteenthOpacity * 44928).toLocaleString()).append('<span>4</span>');
-    $('.fis-graduation').text(Math.round(fourteenthOpacity * 98) + '%');
-    $('.fis-weeks').text(Math.round(fourteenthOpacity * 16)+ ' WEEKS');
-    $('.fis-cost').text('$'+ Math.round(fourteenthOpacity * 15000).toLocaleString());
-    $('.fis-salary').text('$'+ Math.round(fourteenthOpacity * 73771).toLocaleString());
-  }
-
-  // slide 19
-  var nineteenthOpacity = $('.nineteenth .layout-one-container').css('opacity');
-  if (nineteenthOpacity > 0) {
-    $('.hours').text(Math.round(nineteenthOpacity * 990)+ ' HOURS');
-    $('.lecture').text(Math.round(nineteenthOpacity * 144));
-    $('.labs').text(Math.round(nineteenthOpacity * 566));
-    $('.deploying').text(Math.round(nineteenthOpacity * 280));
-    $('.results').text(Math.round(nineteenthOpacity * 2) + ' YEARS');
-    $('.forks').text(Math.round(nineteenthOpacity * 14916).toLocaleString());
-    $('.commits').text(Math.round(nineteenthOpacity * 21815).toLocaleString());
-    $('.labs-complete').text(Math.round(nineteenthOpacity * 890));
-    $('.apps').text(Math.round(nineteenthOpacity * 365));
-  }
-
-  // slide 21
-  var twentyFirstOpacity = $('.twenty-first .layout-one-container').css('opacity');
-  if (twentyFirstOpacity > 0) {
-    $('.mentor').text(Math.round(twentyFirstOpacity * 25)+ '%')
-    $('.tech-conferences').text(Math.round(twentyFirstOpacity * 15) + '%')
-    $('.posts').text(Math.round(twentyFirstOpacity * 1427)+ '+')
+  // slide ROI comparison
+  var roiOpacity = $('.roi-comparison .table-container').css('opacity');
+  if (roiOpacity > 0) {
+    $('.college-employment').text(Math.round(roiOpacity * 71) + '%').append('<span>1</span>');
+    $('.college-months').text(Math.round(roiOpacity * 52)+ ' MONTHS').append('<span>2</span>');
+    $('.college-cost').text('$'+ Math.round(roiOpacity * 62556).toLocaleString()).append('<span>3</span>');
+    $('.college-salary').text('$'+ Math.round(roiOpacity * 44928).toLocaleString()).append('<span>4</span>');
+    $('.fis-employment').text(Math.round(roiOpacity * 98) + '%');
+    $('.fis-months').text(Math.round(roiOpacity * 3)+ ' MONTHS');
+    $('.fis-cost').text('$'+ Math.round(roiOpacity * 12427).toLocaleString());
+    $('.fis-salary').text('$'+ Math.round(roiOpacity * 74447).toLocaleString());
+    $('.fis-online-employment').text(Math.round(roiOpacity * 97) + '%');
+    $('.fis-online-months').text(Math.round(roiOpacity * 7)+ ' MONTHS');
+    $('.fis-online-cost').text('$'+ Math.round(roiOpacity * 5601).toLocaleString());
+    $('.fis-online-salary').text('$'+ Math.round(roiOpacity * 67607).toLocaleString());
   }
 }
 
