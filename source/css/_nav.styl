@@ -36,17 +36,15 @@
   top: 1%
   left: 2%
 
+  @media screen and (max-width: 767px) {
+    width: 75px
+    top: 5px
+    left: 5px
+  }
+
 .flatiron-container
   width: 100%
   z-index: 301
-
-  @media screen and (max-width: 767px) {
-    col(1/8, .09)
-  }
-
-  @media screen and (max-width: 500px) {
-      col(1/8, .12)
-    }
 
 .nav-btn-container
   position: fixed
@@ -55,6 +53,10 @@
 
   .download-text
     margin: 0 0.5em
+
+  @media screen and (max-width: 767px) {
+    right: 50px
+  }
 
 .hamburger-container
   position: fixed
