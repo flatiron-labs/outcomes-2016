@@ -62,10 +62,6 @@
   .event-left, .event-right
     margin-top -50px
 
-
-.two-col-container
-  col(1/2)
-
 .three-col-container
   col(1/3)
 
@@ -160,6 +156,13 @@
   .years
     font 40px NimbusSanCon-Bol
     center(50%)
+
+.outcomes .two-col-container
+  col(1/3, .1)
+
+  @media screen and (max-width: 424px)
+    width:75%
+    padding: 3em 0
 
 #second
   background-color: #00b3e6
@@ -650,7 +653,6 @@ img.down-arrow
   .narrative
     .title-container
       margin-top -30px
-
   .layout-one-container
     margin-top -35px
     .three-col-container
