@@ -323,6 +323,10 @@ img.down-arrow
       width: 100%
       height: 100%
 
+    @media screen and (max-width: 760px)
+      center(250px)
+      margin: 0 auto
+
   .callout-container
     position fixed
     top 40%
@@ -331,6 +335,9 @@ img.down-arrow
   .message-container
     col(.66)
     border-top 1px solid white
+
+    @media screen and (max-width: 872px)
+      col(1)
 
   .technologies-container
     col(.32)
@@ -344,6 +351,12 @@ img.down-arrow
 
     ul
       margin-top: 0.4em
+
+    @media screen and (max-width: 872px)
+      center(300px)
+
+      &:last-child
+        margin-right: auto
 
 #trusted-results-section
   background-color #27578c
