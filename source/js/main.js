@@ -136,9 +136,9 @@ function dynamicText() {
   var roiOpacity = $('.roi-comparison .table-container').css('opacity');
   if (roiOpacity > 0) {
     $('.college-employment').text(Math.round(roiOpacity * 71) + '%').append('<span>1</span>');
-    $('.college-months').text(Math.round(roiOpacity * 52)+ ' MONTHS').append('<span>2</span>');
-    $('.college-cost').text('$'+ Math.round(roiOpacity * 62556).toLocaleString()).append('<span>3</span>');
-    $('.college-salary').text('$'+ Math.round(roiOpacity * 44928).toLocaleString()).append('<span>4</span>');
+    $('.college-months').text(Math.round(roiOpacity * 52)+ ' MONTHS').append('<span>3</span>');
+    $('.college-cost').text('$'+ Math.round(roiOpacity * 62556).toLocaleString()).append('<span>4</span>');
+    $('.college-salary').text('$'+ Math.round(roiOpacity * 44928).toLocaleString()).append('<span>2</span>');
     $('.fis-employment').text(Math.round(roiOpacity * 98) + '%');
     $('.fis-months').text(Math.round(roiOpacity * 3)+ ' MONTHS');
     $('.fis-cost').text('$'+ Math.round(roiOpacity * 12427).toLocaleString());
