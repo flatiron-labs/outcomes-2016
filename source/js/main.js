@@ -24,10 +24,6 @@ snapData.animateDownSettings = {
 };
 
 $(function(){
-  if( isUnsupportedMobile() ) {
-    location.replace("//d280vzogkide3l.cloudfront.net/flatiron_annual_review.pdf");
-  }
-
   // Video load animation
   $('#first-video')[0].onloadeddata = function() {
     $('#first-video').css('transition', '0.5s all linear');
