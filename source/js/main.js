@@ -135,10 +135,10 @@ function dynamicText() {
   // slide ROI comparison
   var roiOpacity = $('.roi-comparison .table-container').css('opacity');
   if (roiOpacity > 0) {
-    $('.college-employment').text(Math.round(roiOpacity * 71) + '%').append('<span>1</span>');
-    $('.college-months').text(Math.round(roiOpacity * 52)+ ' MONTHS').append('<span>3</span>');
-    $('.college-cost').text('$'+ Math.round(roiOpacity * 62556).toLocaleString()).append('<span>4</span>');
-    $('.college-salary').text('$'+ Math.round(roiOpacity * 50651).toLocaleString()).append('<span>2</span>');
+    $('.college-employment').text(Math.round(roiOpacity * 71) + '%').append('<span><a class="header-link" href="https://www.bls.gov/news.release/empsit.t04.htm" target="_blank">1</a></span>');
+    $('.college-months').text(Math.round(roiOpacity * 52)+ ' MONTHS').append('<span><a class="header-link" href="https://nces.ed.gov/fastfacts/display.asp?id=569" target="_blank">3</a></span>');
+    $('.college-cost').text('$'+ Math.round(roiOpacity * 62556).toLocaleString()).append('<span><a class="header-link" href="https://nces.ed.gov/programs/digest/d13/tables/dt13_330.40.asp" target="_blank">4</a></span>');
+    $('.college-salary').text('$'+ Math.round(roiOpacity * 50651).toLocaleString()).append('<span><a class="header-link" href="http://www.naceweb.org/s11182015/starting-salary-class-2015.aspx" target="_blank">2</a></span>');
     $('.fis-employment').text(Math.round(roiOpacity * 98) + '%');
     $('.fis-months').text(Math.round(roiOpacity * 3)+ ' MONTHS');
     $('.fis-cost').text('$'+ Math.round(roiOpacity * 12427).toLocaleString());
